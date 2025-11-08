@@ -112,7 +112,7 @@
       <label for="message">Additional Message</label>
       <textarea id="message" name="message" rows="4" placeholder="E.g., Quantity or delivery date..."></textarea>
 
-      <button type="submit">Send via WhatsApp</button>
+      <button type="submit">Send on WhatsApp</button>
     </form>
   </div>
 
