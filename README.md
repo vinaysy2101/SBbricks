@@ -133,7 +133,7 @@ document.querySelector("form").addEventListener("submit", function(e){
     message: document.getElementById("message").value
   };
 
-  const scriptURL = "https://script.google.com/macros/library/d/1i1CcWDxO3sZLYDDnMkjje61EChMzqbqL0laG_FAtUlTaLs-sgE2nU7S1/4"; // your script link
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxtoLc-RrHAtyrdPdp7QWM-KQFuccZXx8edj3ZPzFWTK9xQ1TGuwAaEijml0L9ypFnUMw/exec"; // your script link
 
   fetch(scriptURL, {
     method: "POST",
