@@ -130,7 +130,7 @@ fetch("https://script.google.com/macros/s/AKfycbzhHvNT0Hress75Vk0rc-05wgw62WNN_7
 .then(txt => {
   if (txt === "OK") {
     alert("Order saved successfully!");
-    const whatsappNumber = "919448034814"; // <-- your number
+    const whatsappNumber = "916363788297"; // <-- your number
     const msg = `🧱 *New Brick Order* 🧱
 
 Name: ${data.name}
