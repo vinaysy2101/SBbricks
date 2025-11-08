@@ -133,7 +133,7 @@ document.querySelector("form").addEventListener("submit", function(e){
     message: document.getElementById("message").value
   };
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbxYOURCODE/exec"; // your script link
+  const scriptURL = "https://script.google.com/macros/library/d/1i1CcWDxO3sZLYDDnMkjje61EChMzqbqL0laG_FAtUlTaLs-sgE2nU7S1/4"; // your script link
 
   fetch(scriptURL, {
     method: "POST",
@@ -147,7 +147,7 @@ document.querySelector("form").addEventListener("submit", function(e){
     alert("✅ Order sent! You’ll get WhatsApp confirmation soon.");
 
     // WhatsApp message
-    const whatsappNumber = "919876543210"; // Replace with your WhatsApp number
+    const whatsappNumber = "916363788297"; // Replace with your WhatsApp number
     const msg = `🧱 *New Brick Order* 🧱
 
 Name: ${data.name}
