@@ -133,17 +133,21 @@ document.querySelector("form").addEventListener("submit", function(e){
     message: document.getElementById("message").value
   };
 
-  // ✅ 1. Save to Google Sheet
-  fetch("https://script.google.com/macros/s/AKfycbxtoLc-RrHAtyrdPdp7QWM-KQFuccZXx8edj3ZPzFWTK9xQ1TGuwAaEijml0L9ypFnUMw/exec", {
-  method: "POST",
-  body: JSON.stringify(data),
-  headers: {"Content-Type": "application/json"}
-})
-.then(res => res.text())
-.then(txt => {
-  if (txt === "OK") {
-    alert("Order saved successfully!");
-    const whatsappNumber = "919876543210"; // <-- your number
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxYOURCODE/exec"; // your script link
+
+  fetch(scriptURL, {
+    method: "POST",
+    mode: "no-cors",  // 👈 this disables browser blocking
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert("✅ Order sent! You’ll get WhatsApp confirmation soon.");
+
+    // WhatsApp message
+    const whatsappNumber = "919876543210"; // Replace with your WhatsApp number
     const msg = `🧱 *New Brick Order* 🧱
 
 Name: ${data.name}
@@ -154,12 +158,11 @@ Message: ${data.message}`;
 
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
     window.open(whatsappURL, "_blank");
-  } else {
-    alert("Error from script: " + txt);
-  }
-})
-.catch(err => alert("Error: " + err));
+  })
+  .catch(err => alert("Error: " + err));
+});
 </script>
+
 
 </body>
 </html>
