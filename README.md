@@ -115,36 +115,37 @@
       <button type="submit">Send on WhatsApp</button>
     </form>
   </div>
-
   <footer>
     <p>📞 Contact: +91 6363788297,8310812864 | 🚚 Delivery: Hubballi, Dharwad, haliyal, savadatti</p>
     <p>© 2025 S B Bricks Manufacturers</p>
   </footer>
 
   <script>
-    document.getElementById("orderForm").addEventListener("submit", function(e){
-      e.preventDefault();
+fetch("https://script.google.com/macros/s/AKfycbzhHvNT0Hress75Vk0rc-05wgw62WNN_7_N4gQXGgT1Cr8Se2jXon86Vwe3jDwkWIRKeQ/exec", {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: {"Content-Type": "application/json"}
+})
+.then(res => res.text())
+.then(txt => {
+  if (txt === "OK") {
+    alert("Order saved successfully!");
+    const whatsappNumber = "919448034814"; // <-- your number
+    const msg = `🧱 *New Brick Order* 🧱
 
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const area = document.getElementById("area").value;
-      const quantity = document.getElementById("quantity").value;
-      const message = document.getElementById("message").value;
+Name: ${data.name}
+Phone: ${data.phone}
+Area: ${data.area}
+Quantity: ${data.quantity}
+Message: ${data.message}`;
 
-      const whatsappNumber = "919448034814"; // 🔁 replace with your WhatsApp number (with country code, no +)
-      
-      const whatsappMsg = `🧱 *New Brick Order* 🧱
-Name: ${name}
-Phone: ${phone}
-Area: ${area}
-Quantity: ${quantity}
-Message: ${message}`;
-
-      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`;
-      window.open(whatsappURL, "_blank");
-    });
-  </script>
-
-
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
+    window.open(whatsappURL, "_blank");
+  } else {
+    alert("Error from script: " + txt);
+  }
+})
+.catch(err => alert("Error: " + err));
+</script>
 </body>
 </html>
