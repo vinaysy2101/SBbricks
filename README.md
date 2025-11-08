@@ -131,7 +131,7 @@
       const quantity = document.getElementById("quantity").value;
       const message = document.getElementById("message").value;
 
-      const whatsappNumber = "919876543210"; // 🔁 replace with your WhatsApp number (with country code, no +)
+      const whatsappNumber = "919448034814"; // 🔁 replace with your WhatsApp number (with country code, no +)
       
       const whatsappMsg = `🧱 *New Brick Order* 🧱
 Name: ${name}
