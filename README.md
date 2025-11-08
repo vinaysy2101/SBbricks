@@ -122,46 +122,28 @@
   </footer>
 
   <script>
-document.querySelector("form").addEventListener("submit", function(e){
-  e.preventDefault();
+    document.getElementById("orderForm").addEventListener("submit", function(e){
+      e.preventDefault();
 
-  const data = {
-    name: document.getElementById("name").value,
-    phone: document.getElementById("phone").value,
-    area: document.getElementById("area").value,
-    quantity: document.getElementById("quantity").value,
-    message: document.getElementById("message").value
-  };
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const area = document.getElementById("area").value;
+      const quantity = document.getElementById("quantity").value;
+      const message = document.getElementById("message").value;
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbxtoLc-RrHAtyrdPdp7QWM-KQFuccZXx8edj3ZPzFWTK9xQ1TGuwAaEijml0L9ypFnUMw/exec"; // your script link
+      const whatsappNumber = "919876543210"; // 🔁 replace with your WhatsApp number (with country code, no +)
+      
+      const whatsappMsg = `🧱 *New Brick Order* 🧱
+Name: ${name}
+Phone: ${phone}
+Area: ${area}
+Quantity: ${quantity}
+Message: ${message}`;
 
-  fetch(scriptURL, {
-    method: "POST",
-    mode: "no-cors",  // 👈 this disables browser blocking
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  })
-  .then(() => {
-    alert("✅ Order sent! You’ll get WhatsApp confirmation soon.");
-
-    // WhatsApp message
-    const whatsappNumber = "916363788297"; // Replace with your WhatsApp number
-    const msg = `🧱 *New Brick Order* 🧱
-
-Name: ${data.name}
-Phone: ${data.phone}
-Area: ${data.area}
-Quantity: ${data.quantity}
-Message: ${data.message}`;
-
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
-    window.open(whatsappURL, "_blank");
-  })
-  .catch(err => alert("Error: " + err));
-});
-</script>
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`;
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
 
 
 </body>
