@@ -135,16 +135,15 @@ document.querySelector("form").addEventListener("submit", function(e){
 
   // ✅ 1. Save to Google Sheet
   fetch("https://script.google.com/macros/s/AKfycbxtoLc-RrHAtyrdPdp7QWM-KQFuccZXx8edj3ZPzFWTK9xQ1TGuwAaEijml0L9ypFnUMw/exec", {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: {"Content-Type": "application/json"}
-  })
-  .then(res => res.text())
-  .then(txt => {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: {"Content-Type": "application/json"}
+})
+.then(res => res.text())
+.then(txt => {
+  if (txt === "OK") {
     alert("Order saved successfully!");
-
-    // ✅ 2. Send message to WhatsApp
-    const whatsappNumber = "916363788297"; // <-- Replace with your WhatsApp number
+    const whatsappNumber = "919876543210"; // <-- your number
     const msg = `🧱 *New Brick Order* 🧱
 
 Name: ${data.name}
@@ -155,9 +154,11 @@ Message: ${data.message}`;
 
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
     window.open(whatsappURL, "_blank");
-  })
-  .catch(err => alert("Error: " + err));
-});
+  } else {
+    alert("Error from script: " + txt);
+  }
+})
+.catch(err => alert("Error: " + err));
 </script>
 
 </body>
