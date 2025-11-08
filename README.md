@@ -134,7 +134,7 @@ document.querySelector("form").addEventListener("submit", function(e){
   };
 
   // ✅ 1. Save to Google Sheet
-  fetch("https://script.google.com/macros/s/AKfycbzm0oMonyRWs3eiSMMoPllxTPnU_1p05ZD2Q0D10Vi0ANYzzcqGLynkaGaR1C4drxn-9Q/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxzQ7Cjwz3zjP1P96INYvofwv00mi7PDS9tGR-i-2koTY7Z0ympRPCVN4cyUYI7a6VRtA/exec", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {"Content-Type": "application/json"}
