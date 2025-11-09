@@ -66,8 +66,9 @@
     <h1>SB Bricks Manufacturers</h1>
     <p>High-quality red-orange wood-fired bricks</p>
   </header>
+  <center>
   <img src="SBbrick.jpg" alt="red brick" class="logo">
-
+  </center>
   <form id="orderForm">
     <h2>Place Your Order</h2>
 
