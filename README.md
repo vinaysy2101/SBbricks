@@ -63,7 +63,6 @@
     padding: 20px;
     }*/
     .logo{
-    .responsive-img {
     width: 100%;           /* fills the width of screen */
     height: auto;          /* keeps the original aspect ratio */
     max-width: 1152px;     /* limits image size on big screens */
@@ -124,7 +123,7 @@
 
     <button type="submit">Send Order on WhatsApp</button>
   </form>
-  <img src="SBbrickcard.jpg" alt="card" class="responsive-img">
+  <img src="SBbrickcard.jpg" alt="visitingcard" class="responsive-img">
   <footer>
     <p>&copy; 2025 SB Bricks Manufacturers +916363788297,8310812864| All Rights Reserved</p>
   </footer>
