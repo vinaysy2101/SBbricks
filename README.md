@@ -116,8 +116,8 @@
     </form>
   </div>
   <footer>
-    <p>📞 Contact: +91 6363788297,8310812864... | 🚚 Delivery: Hubballi, Dharwad, haliyal, savadatti</p>
-    <p>© 2025 S B Bricks Manufacturers</p>
+    <p>📞 Contact: +91 6363788297,8310812864| 🚚 Delivery: Hubballi, Dharwad, haliyal, savadatti</p>
+    <p>© 2025 S B Bricks Manufacturers sb</p>
   </footer>
 
   <script>
