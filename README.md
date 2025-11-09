@@ -55,7 +55,9 @@
       color: #555;
     }
 
-    /* 🔲 comment: logo will go here */
+    .logo{
+    border:2px solid red;
+    }
   </style>
 </head>
 <body>
@@ -64,6 +66,7 @@
     <h1>SB Bricks Manufacturers</h1>
     <p>High-quality red-orange wood-fired bricks</p>
   </header>
+  <img src="C:\Users\vinay\OneDrive\Documents\sb-bricks\SBbrick.jpg" alt="red brick" class="logo">
 
   <form id="orderForm">
     <h2>Place Your Order</h2>
