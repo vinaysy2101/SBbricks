@@ -71,14 +71,21 @@
     border-radius: 10px;   /* optional — soft corners */
     object-fit: cover;     /* keeps it neat if container changes */
     }
-    .responsive-img {
-    width: 100%;           /* fills the width of screen */
-    height: auto;          /* keeps the original aspect ratio */
-    max-width: 600px;     /* limits image size on big screens */
-    display: block;        /* removes extra spacing below image */
-    margin: 0 auto;        /* centers it horizontally */
-    border-radius: 10px;   /* optional — soft corners */
-    object-fit: cover;     /* keeps it neat if container changes */
+    /*.responsive-img {
+    width: 100%;           
+    height: auto;          
+    max-width: 600px;     
+    display: block;        
+    margin: 0 auto;        
+    border-radius: 10px;   
+    object-fit: cover;     
+    }*/
+    .resposive-img{
+      border:2px solid red;
+      max-width: 300px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
     }
     @media (max-width: 600px) {
     .responsive-img {
@@ -123,7 +130,9 @@
 
     <button type="submit">Send Order on WhatsApp</button>
   </form>
+  <center>
   <img src="SBbrickcard.jpg" alt="visitingcard" class="responsive-img">
+  </center>
   <footer>
     <p>&copy; 2025 SB Bricks Manufacturers +916363788297,8310812864| All Rights Reserved</p>
   </footer>
