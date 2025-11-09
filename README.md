@@ -132,6 +132,7 @@
   </form>
   <center>
   <img src="SBbrickcard.jpg" alt="visitingcard" class="responsive-img">
+    <h4>contact for website design <u>9448034814</u></h4>
   </center>
   <footer>
     <p>&copy; 2025 SB Bricks Manufacturers +916363788297,8310812864| All Rights Reserved</p>
