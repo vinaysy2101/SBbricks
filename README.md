@@ -57,6 +57,10 @@
 
     .logo{
     border:2px solid red;
+    max-width: 500px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
     }
   </style>
 </head>
