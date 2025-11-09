@@ -87,7 +87,7 @@
   </form>
 
   <footer>
-    <p>&copy; 2025 SB Bricks Manufacturers | All Rights Reserved</p>
+    <p>&copy; 2025 SB Bricks Manufacturers +916363788297,8310812864| All Rights Reserved</p>
   </footer>
 
   <script>
@@ -100,7 +100,7 @@
       const quantity = document.getElementById("quantity").value;
       const message = document.getElementById("message").value;
 
-      const whatsappNumber = "919876543210"; // 🔁 replace with your WhatsApp number (with country code, no +)
+      const whatsappNumber = "916363788297"; // 🔁 replace with your WhatsApp number (with country code, no +)
       
       const whatsappMsg = `🧱 *New Brick Order* 🧱
 Name: ${name}
@@ -116,3 +116,4 @@ Message: ${message}`;
 
 </body>
 </html>
+
