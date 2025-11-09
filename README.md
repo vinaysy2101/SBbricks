@@ -55,13 +55,44 @@
       color: #555;
     }
 
-    .logo{
+    /*.logo{
     border:2px solid red;
     max-width: 300px;
     margin: 20px auto;
     background: white;
     padding: 20px;
+    }*/
+    .logo{
+    .responsive-img {
+    width: 100%;           /* fills the width of screen */
+    height: auto;          /* keeps the original aspect ratio */
+    max-width: 1152px;     /* limits image size on big screens */
+    display: block;        /* removes extra spacing below image */
+    margin: 0 auto;        /* centers it horizontally */
+    border-radius: 10px;   /* optional — soft corners */
+    object-fit: cover;     /* keeps it neat if container changes */
     }
+    .responsive-img {
+    width: 100%;           /* fills the width of screen */
+    height: auto;          /* keeps the original aspect ratio */
+    max-width: 1152px;     /* limits image size on big screens */
+    display: block;        /* removes extra spacing below image */
+    margin: 0 auto;        /* centers it horizontally */
+    border-radius: 10px;   /* optional — soft corners */
+    object-fit: cover;     /* keeps it neat if container changes */
+    }
+    @media (max-width: 600px) {
+    .responsive-img {
+    border-radius: 5px;
+    max-width: 100%;
+    }
+    .logo{
+    border-radius:5px;
+    max-width:100%
+    }
+    }
+
+
   </style>
 </head>
 <body>
@@ -93,7 +124,7 @@
 
     <button type="submit">Send Order on WhatsApp</button>
   </form>
-
+  <img src="SBbrickcard.jpg" alt="card" class="responsive-img">
   <footer>
     <p>&copy; 2025 SB Bricks Manufacturers +916363788297,8310812864| All Rights Reserved</p>
   </footer>
