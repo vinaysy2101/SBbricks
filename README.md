@@ -1,151 +1,118 @@
-# SBbricks
+#SB Bricks Manufacturers
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S B Bricks Manufacturers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SB Bricks Manufacturers</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f8f4ef;
+      background-color: #f8f3ef;
+      color: #333;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #a83232;
+      background-color: #b53a1c;
       color: white;
       text-align: center;
-      padding: 15px 0;
+      padding: 20px;
     }
 
-    .container {
-      max-width: 600px;
-      background: #fff;
-      margin: 30px auto;
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
-    h2 {
-      text-align: center;
-      color: #a83232;
-    }
-
-    label {
-      display: block;
-      margin: 10px 0 5px;
-      font-weight: bold;
-    }
-
     input, textarea, select, button {
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 5px;
+      margin: 8px 0;
       border: 1px solid #ccc;
+      border-radius: 5px;
       font-size: 16px;
     }
 
     button {
-      background-color: #a83232;
+      background-color: #b53a1c;
       color: white;
       border: none;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: #c44545;
+      background-color: #8a2e16;
     }
 
     footer {
       text-align: center;
       padding: 10px;
-      background-color: #a83232;
-      color: white;
-      margin-top: 20px;
+      color: #555;
     }
 
-    .logo {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    /* 💡 Add your logo image later:
-       <img src="logo.png" alt="S B Bricks Logo" width="200"> */
+    /* 🔲 comment: logo will go here */
   </style>
 </head>
 <body>
+
   <header>
-    <h1>S B Bricks Manufacturers</h1>
-    <p>Wood-fired Red & Orange Bricks with deep "S*B" mark</p>
+    <h1>SB Bricks Manufacturers</h1>
+    <p>High-quality red-orange wood-fired bricks</p>
   </header>
 
-  <div class="container">
-    <div class="logo">
-      <!-- 🧱 Add your logo here later with <img> -->
-    </div>
+  <form id="orderForm">
+    <h2>Place Your Order</h2>
 
-    <h2>Order / Inquiry Form</h2>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" required>
 
-    <form id="orderForm">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" required>
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+    <label for="area">Delivery Area:</label>
+    <input type="text" id="area" required>
 
-      <label for="area">Delivery Area</label>
-      <select id="area" name="area" required>
-        <option value="">Select your area</option>
-        <option>Hubballi</option>
-        <option>Dharwad</option>
-        <option>haliyal</option>
-        <option>savadatti</option>
-        <option>Other</option>
-      </select>
-      <label for="quantity">Quantity (Number of Bricks)</label>
-      <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required />
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" required>
 
+    <label for="message">Additional Message:</label>
+    <textarea id="message" rows="3"></textarea>
 
-      <label for="message">Additional Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="E.g., Quantity or delivery date..."></textarea>
+    <button type="submit">Send Order on WhatsApp</button>
+  </form>
 
-      <button type="submit">Send on WhatsApp</button>
-    </form>
-  </div>
   <footer>
-    <p>📞 Contact: +91 6363788297,8310812864| 🚚 Delivery: Hubballi, Dharwad, haliyal, savadatti</p>
-    <p>© 2025 S B Bricks Manufacturers sb</p>
+    <p>&copy; 2025 SB Bricks Manufacturers | All Rights Reserved</p>
   </footer>
 
   <script>
-fetch("https://script.google.com/macros/s/AKfycbzhHvNT0Hress75Vk0rc-05wgw62WNN_7_N4gQXGgT1Cr8Se2jXon86Vwe3jDwkWIRKeQ/exec", {
-  method: "POST",
-  body: JSON.stringify(data),
-  headers: {"Content-Type": "application/json"}
-})
-.then(res => res.text())
-.then(txt => {
-  if (txt === "OK") {
-    alert("Order saved successfully!");
-    const whatsappNumber = "916363788297"; // <-- your number
-    const msg = `🧱 *New Brick Order* 🧱
+    document.getElementById("orderForm").addEventListener("submit", function(e){
+      e.preventDefault();
 
-Name: ${data.name}
-Phone: ${data.phone}
-Area: ${data.area}
-Quantity: ${data.quantity}
-Message: ${data.message}`;
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const area = document.getElementById("area").value;
+      const quantity = document.getElementById("quantity").value;
+      const message = document.getElementById("message").value;
 
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
-    window.open(whatsappURL, "_blank");
-  } else {
-    alert("Error from script: " + txt);
-  }
-})
-.catch(err => alert("Error: " + err));
-</script>
+      const whatsappNumber = "919876543210"; // 🔁 replace with your WhatsApp number (with country code, no +)
+      
+      const whatsappMsg = `🧱 *New Brick Order* 🧱
+Name: ${name}
+Phone: ${phone}
+Area: ${area}
+Quantity: ${quantity}
+Message: ${message}`;
+
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`;
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
+
 </body>
 </html>
