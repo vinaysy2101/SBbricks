@@ -74,7 +74,7 @@
     .responsive-img {
     width: 100%;           /* fills the width of screen */
     height: auto;          /* keeps the original aspect ratio */
-    max-width: 1152px;     /* limits image size on big screens */
+    max-width: 600px;     /* limits image size on big screens */
     display: block;        /* removes extra spacing below image */
     margin: 0 auto;        /* centers it horizontally */
     border-radius: 10px;   /* optional — soft corners */
