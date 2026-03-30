@@ -138,7 +138,7 @@
   </footer>
 <script>
   const form = document.getElementById("orderForm");
-  const scriptURL = "https://script.google.com/macros/s/AKfycbzOlQLgGQ0NxeR_khEG5_hhkyGCQJ-d6Kf274SDhlN__DPqF-X8MyESgrnSn2wvupJC6g/exec"; // Replace with your Apps Script URL
+  const scriptURL = "https://script.google.com/macros/s/AKfycbw5bmSlp6m0E8a9xonPcuEtWxGaS-NzhYXqrBdMgG--JODWePLTbjm4cIZso8Qd3kjZ2g/exec"; // Replace with your Apps Script URL
 
   form.addEventListener("submit", async function(e) {
     e.preventDefault();
@@ -162,7 +162,7 @@ Message: ${message}`;
 
     // Save to Google Sheet in background
     const formData = new FormData(form);
-
+    formData.append("action","add");
     try {
       const response = await fetch(scriptURL, {
         method: "POST",
