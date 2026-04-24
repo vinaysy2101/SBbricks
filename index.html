@@ -223,6 +223,14 @@
         text-align: left;
       }
     }
+    #webcont{
+      background-color:grey;
+      text-align: center;
+      padding: 10px;
+    }
+    #btnClick{
+        width:100px;
+    }
   </style>
 </head>
 <body>
@@ -266,11 +274,12 @@
 
       <button type="submit">Send Order on WhatsApp</button>
     </form>
-
     <img src="SBbrickcard.jpg" alt="visitingcard" class="resposive-img">
-
   </div>
-
+  <div id="webcont">
+    <p>for build websites like this contact +919448034814 click below link to contact on whatsapp</p>
+    <button onclick="webdev()" id="btnClick">Click Me</button>
+  </div>
   <footer>
     <p>&copy; 2025 SB Bricks Manufacturers | +91 6363788297, +91 8310812864 | All Rights Reserved</p>
   </footer>
@@ -320,6 +329,12 @@ Message: ${message}`;
 
     form.reset();
   });
+  function webdev(){
+    const whatsappNum="+919448034814";
+    const whatsMsg=`hi vinay, i am inspired by your SBbricks website. can i talk to you`;
+    const whatsURL=`https://wa.me/${whatsappNum}?text=${encodeURIComponent(whatsMsg)}`;
+    window.open(whatsURL,"_blank");
+  }
 </script>
 
 </body>
